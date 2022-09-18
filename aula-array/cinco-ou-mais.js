@@ -1,32 +1,28 @@
-const precos = [100, 500, 50, 100, 200, 30];
+const precos = [100, 20, 30, 500, 100, 200, 50];
 
-const produto = precos.length;
-let totalApagar = 0;
-let valorMaior = 0;
-let valorMenor = 0;
+let soma = 0;
+for (let preco of precos) {
+    soma += preco;
+}
 
-if (produto < 5) {
-    for (let valor of precos) {
-        totalApagar += valor;
-    }
+if (precos.length >= 5) {
 
-} else {
-    for (let valor of precos) {
-        totalApagar += valor;
+    let menor = precos[0];
+    for (let itemAtual of precos) {
 
-    }
-    for (let maior of precos) {
-        if (valorMaior < maior) {
-            valorMaior = maior;
-        } else {
-            valorMaior = maior;
+        if (itemAtual < menor) {
+            menor = itemAtual;
         }
 
+
     }
-    totalApagar -= valorMaior;
-
-
+    console.log(soma - menor);
+}
+else {
+    console.log(soma);
 }
 
 
-console.log(totalApagar);
+// descobrindo o menor numero
+
+
