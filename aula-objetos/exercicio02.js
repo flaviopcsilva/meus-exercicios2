@@ -18,7 +18,7 @@
 const cartao = {
   nome = "Flavio",
   idade : 41,
-  produtos :[
+  produtos : [
   {
     nome : "Pão",
     precounit : 100,
@@ -26,7 +26,7 @@ const cartao = {
   }, {
     nome : "Queijo",
     precounit : 500,
-    quantidade : 5,
+    quantidade : 5
   }, {
     nome : "Leite",
     precounit : 900,
