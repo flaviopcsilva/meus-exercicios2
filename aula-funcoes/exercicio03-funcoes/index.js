@@ -4,8 +4,8 @@ const carrinho = {
         {
             id: 1,
             nome: "Camisa",
-            qtd: 3,
-            precoUnit: 3000
+            qtd: 1,
+            precoUnit: 8000
         },
         {
             id: 2,
@@ -89,12 +89,13 @@ const carrinho = {
         let descontoTotalPorValor = 0;
 
         if (totalDeItens > 4) {
-            descontoTotalPorItens = produtos[0].precoUnit / 100;
+            descontoTotalPorItens = produtos[0].precoUnit;
             for (const produto of produtos) {
                 if (produto.precoUnit < descontoTotalPorItens) {
-                    descontoTotalPorItens = produto.precoUnit / 100;
+                    descontoTotalPorItens = produto.precoUnit;
                 }
             }
+            descontoTotalPorItens /= 100;
         }
 
         if (totalAPagar > 100) {
@@ -112,7 +113,7 @@ const novaBermuda = {
     precoUnit: 5000
 }
 
-// carrinho.addProduto(novaBermuda);
+carrinho.addProduto(novaBermuda);
 // carrinho.imprimirResumo();
 
 const novoTenis = {
@@ -122,10 +123,10 @@ const novoTenis = {
     precoUnit: 10000
 }
 
-// carrinho.addProduto(novoTenis);
-// carrinho.imprimirResumo();
+carrinho.addProduto(novoTenis);
+carrinho.imprimirResumo();
 
-// carrinho.imprimirDetalhes();
-// carrinho.calcularDesconto();
+carrinho.imprimirDetalhes();
+carrinho.calcularDesconto();
 
 console.log(carrinho.calcularDesconto());
