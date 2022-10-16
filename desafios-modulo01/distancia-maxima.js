@@ -15,6 +15,8 @@ function solucao(input) {
         })
     }
 
+    //const resultado=2 ≤ n ≤ 10^3 -1000 ≤ x, y ≤ 1000;
+
 
     console.log(coordenadas);
 }
