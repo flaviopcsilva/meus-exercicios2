@@ -20,4 +20,12 @@ function jogada(carta) {
     console.log(manilha);
 }
 
+const cartas=["2","3","Q","K","A","J"];
+function jogada2(carta){
+  let manilha="";
+  for(let item of carta){
+    
+  }
+}
+
 jogada("Q");
