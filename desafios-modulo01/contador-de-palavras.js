@@ -1,10 +1,18 @@
 function contadorDePalavras(texto) {
     // console.log(texto.length);
-    if (texto.length <= 5000) {
-        let arrayDeTexto = texto.trim().split(" ");
+   // if (texto.length <= 5000) {
+       // let arrayDeTexto = texto.trim().split(" ");
         //arrayDeTexto = arrayDeTexto.split(" ");
-        console.log(arrayDeTexto.length);
-    }
+     //   console.log(arrayDeTexto.length);
+   // }
+   let arrayDeTexto=texto.trim().split(" ");
+   let contador=0;
+   for(i=0;i<arrayDeTexto.length;i++){
+     if(arrayDeTexto[i]!=""){
+       contador++;
+     }
+   }
+   console.log(contador);
 
 
 }
