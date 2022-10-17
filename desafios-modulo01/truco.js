@@ -1,6 +1,3 @@
-
-
-
 function jogada(carta) {
     let manilha = "";
     if (carta === "Q") {
