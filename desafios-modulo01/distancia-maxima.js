@@ -20,6 +20,6 @@ function solucao(input) {
 
     console.log(coordenadas);
 }
-
+// dica, tem que achar o xa e xb, ya e yb e aplicar a fórmula d=raiz de (xa-xb)^+(ya-yb)^
 
 solucao(texto);
