@@ -15,15 +15,32 @@ function solucao(input) {
         })
     }
 let distancia=0;
-let x1=0;
-let x2=0;
-let y1=0;
-let y2=0;
+let x1=1000;
+let x2=-1000;
+let y1=1000;
+let y2=-1000;
+for (let item of coordenadas){
+//  console.log(item.x,item.y);
+  if (item.x<x1){
+    x1=item.x;
+  }
+  if(item.x>x2){
+    x2=item.x;
+  }
+if (item.y<y1){
+    y1=item.y;
+  }
+  if(item.y>y2){
+    y2=item.y;
+  }
+  
+}
+
     //const resultado=2 ≤ n ≤ 10^3 -1000 ≤ x, y ≤ 1000;
-    distancia=Math.sqrt((Math.pow(x1-x2,2))+(Math.pow(y1+y2,2)),2);
+    distancia=Math.sqrt((Math.pow(x1-x2,2))+(Math.pow(y1+y2,2)));
 
 
-    console.log(coordenadas);
+   // console.log(coordenadas);
     console.log(distancia);
 }
 // dica, tem que achar o xa e xb, ya e yb e aplicar a fórmula d=raiz de (xa-xb)^+(ya-yb)^
