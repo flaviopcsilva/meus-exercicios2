@@ -20,7 +20,7 @@ let x2=-1000;
 let y1=1000;
 let y2=-1000;
 for (let item of coordenadas){
-//  console.log(item.x,item.y);
+  //console.log(item.x,item.y);
   if (item.x<x1){
     x1=item.x;
   }
