@@ -14,11 +14,17 @@ function solucao(input) {
             y: parseInt(coord[1], 10)
         })
     }
-
+let distancia=0;
+let x1=0;
+let x2=0;
+let y1=0;
+let y2=0;
     //const resultado=2 ≤ n ≤ 10^3 -1000 ≤ x, y ≤ 1000;
+    distancia=Math.sqrt((Math.pow(x1-x2,2))+(Math.pow(y1+y2,2)),2);
 
 
     console.log(coordenadas);
+    console.log(distancia);
 }
 // dica, tem que achar o xa e xb, ya e yb e aplicar a fórmula d=raiz de (xa-xb)^+(ya-yb)^
 
