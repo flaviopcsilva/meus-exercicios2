@@ -16,11 +16,11 @@ function solucao(input) {
     }
 let distancia=0;
 let x1=1000;
-let x2=-1000;
+let x2=0;
 let y1=1000;
-let y2=-1000;
+let y2=0;
 for (let item of coordenadas){
-  //console.log(item.x,item.y);
+  console.log(item.x,item.y);
   if (item.x<x1){
     x1=item.x;
   }
