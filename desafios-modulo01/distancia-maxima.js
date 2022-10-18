@@ -46,3 +46,4 @@ if (item.y<y1){
 // dica, tem que achar o xa e xb, ya e yb e aplicar a fórmula d=raiz de (xa-xb)^+(ya-yb)^
 
 solucao(texto);
+solucao("5\n3.56 17\n-5.1 36.3\n0.0002 -2\n5 5\n-9.01 -17.7")
