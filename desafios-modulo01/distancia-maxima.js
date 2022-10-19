@@ -49,7 +49,7 @@ function solucao(input) {
   console.log(distancia);
 }
 
-
+// fazer um teste com todas as coordenadas
 solucao(texto);
 solucao("5\n3.56 17\n-5.1 36.3\n0.0002 -2\n5 5\n-9.01 -17.7")
 
