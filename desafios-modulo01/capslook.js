@@ -30,14 +30,20 @@ function solucao(input) {
     const restoDaPalavra = input.slice(1);
     //console.log(restoDaPalavra);
 
-    if (primeiraLetra === primeiraLetra.toLowerCase() && restoDaPalavra === restoDaPalavra.toUpperCase()) {
-        letraFormatada = primeiraLetra.toUpperCase() + restoDaPalavra.toLowerCase();
-        console.log(letraFormatada);
-    } else {
-        console.log(input);
-    }
+   // if (primeiraLetra === primeiraLetra.toLowerCase() && restoDaPalavra === restoDaPalavra.toUpperCase()) {
+     //   letraFormatada = primeiraLetra.toUpperCase() + restoDaPalavra.toLowerCase();
+      //  console.log(letraFormatada);
+ //   } else {
+    //    console.log(input);
+ //   }
+ if(primeiraLetra===primeiraLetra.toLowerCase && restoDaPalavra===restoDaPalavra.toUpperCase){
+letraFormatada=primeiraLetra.toUpperCase+restoDaPalavra.toLowerCase;
+console.log(letraFormatada);
 
-
+} else if(input===input.toUpperCase){
+  console.log(input.toLowerCase);
+}else{
+  console.log(input);
 }
 
 solucao("letra");
