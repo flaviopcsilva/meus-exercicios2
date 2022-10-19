@@ -1,4 +1,4 @@
-const texto = "cubos\newvelrabsocaeln"
+const texto = "FlavioCardoso\nFflewvelrabvsioclkaelrndskokjsjero"
 
 function validar(input) {
     const linhas = input.trim().split("\n");
@@ -8,11 +8,18 @@ function validar(input) {
     let abrir = "";
     for (let letraSenha of senhaCorreta) {
         for (let letraDigitada of senhaDigitada) {
+
             if (letraSenha === letraDigitada) {
                 abrir += letraSenha;
                 break;
             }
         }
+    }
+    if (abrir === senhaCorreta) {
+        console.log("SIM");
+
+    } else {
+        console.log("NAO");
     }
 
     // for (let caracter of senhaDigitada) {
@@ -36,4 +43,4 @@ function validar(input) {
 }
 
 validar(texto);
-validar("cubos\ncuuuggbyos")
+validar("cubos\nucccuuuggbyoos")
