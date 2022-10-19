@@ -18,8 +18,14 @@ function solucao(input) {
 
   for (let i = 0; i < coordenadas.length; i++) {
     for (let j = 1; j < coordenadas.length; j++) {
-      let x =;
-      let y = 0;
+      let x = coordenadas[i].x - coordenadas[j].x;
+      //console.log(x)
+      let y = coordenadas[i].y - coordenadas[j].y;
+      let resultado = Math.hypot(x, y);
+      if (resultado > distancia) {
+        distancia = resultado;
+      }
+
 
     }
   }
