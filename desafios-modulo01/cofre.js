@@ -6,24 +6,34 @@ function validar(input) {
     const senhaDigitada = linhas[1];
 
     let abrir = "";
-
-    for (let caracter of senhaDigitada) {
-        let letra = caracter;
-        let temLetra = senhaCorreta.includes(letra);
-        if (temLetra) {
-            abrir += caracter;
+    for (let letraSenha of senhaCorreta) {
+        for (let letraDigitada of senhaDigitada) {
+            if (letraSenha === letraDigitada) {
+                abrir += letraSenha;
+                break;
+            }
         }
-
     }
-    if (abrir === senhaCorreta) {
-        console.log("SIM");
-    } else {
-        console.log("NÃO");
-    }
-    //console.log(abrir);
 
-    // console.log(senhaCorreta, senhaDigitada);
+    // for (let caracter of senhaDigitada) {
+    //     let letra = caracter;
+    //     let temLetra = senhaCorreta.includes(letra);
+    //     if (temLetra) {
+    //         abrir += caracter;
+    //     }
+
+    // }
+    // if (abrir === senhaCorreta) {
+    //     console.log("SIM");
+    // } else {
+    //     console.log("NÃO");
+    // }
+    // //console.log(abrir);
+
+    // // console.log(senhaCorreta, senhaDigitada);
+    console.log(abrir);
 
 }
 
 validar(texto);
+validar("cubos\ncuuuggbyos")

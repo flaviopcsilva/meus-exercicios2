@@ -14,36 +14,45 @@ function solucao(input) {
       y: parseFloat(coord[1])
     })
   }
-  let distancia = -1000;
-  let x1 = 1000;
-  let x2 = 0;
-  let y1 = 1000;
-  let y2 = -1000;
-  for (let item of coordenadas) {
-    //console.log(item.x,item.y);
-    if (item.x < x1) {
-      x1 = item.x;
-    }
-    if (item.x > x2) {
-      x2 = item.x;
-    }
-    if (item.y < y1) {
-      y1 = item.y;
-    }
-    if (item.y > y2) {
-      y2 = item.y;
-    }
+  let distancia = 0;
 
+  for (let i = 0; i < coordenadas.length; i++) {
+    for (let j = 1; j < coordenadas.length; j++) {
+      let x =;
+      let y = 0;
+
+    }
   }
-  let x3 = x1 + x2;
-  let y3 = y1 + y2;
+
+  // let x1 = 1000;
+  // let x2 = 0;
+  // let y1 = 1000;
+  // let y2 = -1000;
+  // for (let item of coordenadas) {
+  //   //console.log(item.x,item.y);
+  //   if (item.x < x1) {
+  //     x1 = item.x;
+  //   }
+  //   if (item.x > x2) {
+  //     x2 = item.x;
+  //   }
+  //   if (item.y < y1) {
+  //     y1 = item.y;
+  //   }
+  //   if (item.y > y2) {
+  //     y2 = item.y;
+  //   }
+
+  // }
+  // let x3 = x1 + x2;
+  // let y3 = y1 + y2;
 
 
-  // console.log(x3, y3);
-  // console.log(x1, x2, y1, y2)
+  // // console.log(x3, y3);
+  // // console.log(x1, x2, y1, y2)
 
-  // distancia = Math.hypot(x3, y3);
-  distancia = parseFloat(Math.sqrt((Math.pow(x1 + x2, 2)) + (Math.pow(y1 + y2, 2))));
+  // // distancia = Math.hypot(x3, y3);
+  // distancia = parseFloat(Math.sqrt((Math.pow(x1 + x2, 2)) + (Math.pow(y1 + y2, 2))));
 
 
   console.log(distancia);
