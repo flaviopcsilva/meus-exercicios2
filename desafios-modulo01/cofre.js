@@ -1,12 +1,22 @@
 const texto = "FlavioCardoso\nFflewvelrabvsioclkaelrndskokjsjero"
 
 function validar(input) {
-    const linhas = input.trim().split("\n");
-    const senhaCorreta = linhas[0];
-    const senhaDigitada = linhas[1];
+  //  const linhas = input.split("\n")[0];
+    const senhaCorreta = input.split("\n")[0];
+    const senhaDigitada = input.split("\n")[1];
 
     let abrir = "";
-    for (let letraSenha of senhaCorreta) {
+    let contador=0;
+    for(i=0;i<senhaCorreta.length;i++){
+      for(j=contador;j<senhaDigitada.length;j++){
+        if(senhaCorreta[i]===senhaDigitada[j]){
+          abrir+=senhaDigitada[j];
+          contador=j;
+          break;
+        }
+      }
+    }
+   /* for (let letraSenha of senhaCorreta) {
         for (let letraDigitada of senhaDigitada) {
 
             if (letraSenha === letraDigitada) {
@@ -14,31 +24,13 @@ function validar(input) {
                 break;
             }
         }
-    }
+    }*/
     if (abrir === senhaCorreta) {
         console.log("SIM");
 
     } else {
         console.log("NAO");
     }
-
-    // for (let caracter of senhaDigitada) {
-    //     let letra = caracter;
-    //     let temLetra = senhaCorreta.includes(letra);
-    //     if (temLetra) {
-    //         abrir += caracter;
-    //     }
-
-    // }
-    // if (abrir === senhaCorreta) {
-    //     console.log("SIM");
-    // } else {
-    //     console.log("NÃO");
-    // }
-    // //console.log(abrir);
-
-    // // console.log(senhaCorreta, senhaDigitada);
-    console.log(abrir);
 
 }
 
