@@ -28,13 +28,8 @@ function solucao(input) {
                 distancia = resultado;
             }
 
-
         }
     }
-
-
-
-
     console.log(distancia);
 }
 
