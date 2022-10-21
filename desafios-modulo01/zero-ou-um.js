@@ -45,8 +45,7 @@ function solucao(jogadores) {
             contadorDeUm++;
         }
     }
-
-    if (contadorDeUm === 1) {
+    if(contadorDeUm === 1) {
 
         for (let item of jogadores) {
             if (item.jogada === 1) {
