@@ -1,0 +1,28 @@
+{
+    "vendas": [
+        {
+            "produto": {
+                "id": 2,
+                "nome": "Notebook Dell",
+                "valor": 399900
+            },
+            "quantidade": 3
+        },
+        {
+            "produto": {
+                "id": 5,
+                "nome": "Cabo USB 2 Metros",
+                "valor": 1990
+            },
+            "quantidade": 3
+        },
+        {
+            "produto": {
+                "id": 1,
+                "nome": "TV Sansung 4K",
+                "valor": 129900
+            },
+            "quantidade": 1
+        }
+    ]
+}
