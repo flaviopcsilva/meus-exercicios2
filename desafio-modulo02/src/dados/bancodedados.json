@@ -1,0 +1,35 @@
+{
+    "banco": {
+        "contador": 3,
+        "saldo": 0,
+        "nome": "Cubos Bank",
+        "numero": "123",
+        "agencia": "0001",
+        "senha": "Cubos123Bank"
+    },
+    "contas": [
+        {
+            "numeroDaConta": 1,
+            "nome": "Flávio Peres Cardoso Silva",
+            "cpf": "09515622743",
+            "data_nascimento": "20/01/1981",
+            "telefone": "21 97486-3278",
+            "email": "flaviopc2@gmail.com",
+            "senha": "252525",
+            "saldo": 0
+        },
+        {
+            "numeroDaConta": 2,
+            "nome": "Sônia Peres Cardoso",
+            "cpf": "03558877705",
+            "data_nascimento": "11/02/1965",
+            "telefone": "21 97486-3278",
+            "email": "soniapcs@gmail.com",
+            "senha": "352532",
+            "saldo": 0
+        }
+    ],
+    "saques": [],
+    "depositos": [],
+    "transferencias": []
+}
