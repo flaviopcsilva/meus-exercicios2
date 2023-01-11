@@ -106,12 +106,20 @@ const deposito = async (req, res) => {
     } catch (error) {
         return res.status(500).json({ Mensagem: error.message });
     }
-}
+};
 
+// Atualizar conta
+const atualizarConta = async (req, res) => {
+    try {
 
+    } catch (error) {
+        return res.status(500).json({ Mensagem: error.message });
+    }
+};
 
 module.exports = {
     listarContas,
     cadastrarConta,
-    deposito
+    deposito,
+    atualizarConta
 };
