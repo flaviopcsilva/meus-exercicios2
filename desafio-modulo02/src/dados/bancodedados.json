@@ -1,6 +1,6 @@
 {
     "banco": {
-        "contador": 3,
+        "contador": 4,
         "saldo": 0,
         "nome": "Cubos Bank",
         "numero": "123",
@@ -16,7 +16,7 @@
             "telefone": "21 97486-3278",
             "email": "flaviopc2@gmail.com",
             "senha": "252525",
-            "saldo": 0
+            "saldo": 200000
         },
         {
             "numeroDaConta": 2,
@@ -27,9 +27,25 @@
             "email": "soniapcs@gmail.com",
             "senha": "352532",
             "saldo": 0
+        },
+        {
+            "numeroDaConta": 3,
+            "nome": "UBIRAJARA DOS SANTOS SOARES",
+            "cpf": "08677382780",
+            "data_nascimento": "14/07/1978",
+            "telefone": "21 97486-5856",
+            "email": "ubirajarasoares@gmail.com",
+            "senha": "452565",
+            "saldo": 0
         }
     ],
     "saques": [],
-    "depositos": [],
+    "depositos": [
+        {
+            "data": "11-01-23 10:35:22",
+            "numero_conta": "1",
+            "valor": 200000
+        }
+    ],
     "transferencias": []
 }
