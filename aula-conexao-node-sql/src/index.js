@@ -33,7 +33,7 @@ app.get('/', async (req, res) => {
         return res.json(resultado.rows)
 
     } catch (error) {
-        return res.json('deu erro')
+        return res.json(error)
     }
 })
 
