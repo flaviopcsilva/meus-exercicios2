@@ -7,6 +7,7 @@ app.use(express.json())
 
 app.use(rotas)
 
+
 app.listen(3000, () => {
     console.log('O servidor está rodando na porta http://localhost:3000')
 })
