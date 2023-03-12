@@ -79,6 +79,29 @@ app.post('/usuario', addUsuario)
 app.put('/usuario/:id', atualizar)
 app.delete('/usuario/:id', deleteRegistro)
 
+app.post('/:id/anotacoes', async (req, res) => {
+    const { id } = req.params
+    const { nota } = req.body
+
+    const anotacao = await knex('anotacoes')
+        .insert({
+            agenda_id: id,
+            nota
+        })
+        .returning('*')
+        .debug()
+
+    return res.json(anotacao)
+})
+//      aplicando join
+app.get('/anotacoes', async (req, res) => {
+    const anotacoes = await knex('anotacoes')
+        .join('agenda', 'anotacoes.agenda_id', '=', 'agenda.id')
+        .select('anotacoes.*', 'agenda.nome')
+        .debug()
+    return res.json(anotacoes)
+})
+
 app.listen(3000, () => {
     console.log('O servidor está rodando na porta http://localhost:3000')
 })
