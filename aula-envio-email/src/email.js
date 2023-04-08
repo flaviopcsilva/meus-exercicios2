@@ -1,12 +1,16 @@
 const nodemailer = require('nodemailer')
 
+
+
 const transporte = nodemailer.createTransport({
-    host: process.env.MAIL_HOST,
-    port: process.env.MAIL_PORT,
+    host: "smtp.sendgrid.net",
+    port: 465,
     auth: {
-        user: process.env.MAIL_USER,
-        senha: process.env.MAIL_PASS
+        user: "apikey",
+        pass: process.env.PASS_SENDGRID
     }
+
 })
+
 
 module.exports = transporte

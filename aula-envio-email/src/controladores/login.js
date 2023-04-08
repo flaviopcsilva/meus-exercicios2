@@ -1,4 +1,6 @@
 const transportador = require('../email')
+const fs = require('fs/promises')
+const handlebars = require('handlebars')
 
 const usuario = {
     nome: 'Cardoso Cubos',
@@ -15,14 +17,30 @@ const login = async (req, res) => {
     if (usuario.senha !== senha) {
         return res.status(400).json({ Mensagem: 'Email ou senha inválidos.' })
     }
+    // const arquivo = await fs.readFile('./src/templates/login.html')
+
+
+    const compilador = handlebars.compile(
+        '<h1>Você fez login na {{api}} de Envio de emails {{nomeusuario}}?</h1>'
+    )
+
+    const htmlString = compilador(
+        {
+            nomeusuario: usuario.nome,
+            api: 'API'
+
+        }
+    )
+
     try {
+
         //  FAZER ENVIO DE EMAIL
 
         transportador.sendMail({
             from: `${process.env.MAIL_NAME} <${process.env.MAIL_FROM}>`,
             to: `${usuario.nome} <${usuario.email}>`,
-            subject: 'Verificação de Integração',
-            text: 'Integração verificada com sucesso'
+            subject: 'Tentiva de login',
+            html: htmlString
 
         })
 
@@ -34,6 +52,12 @@ const login = async (req, res) => {
 
 }
 
+const teste = async (req, res) => {
+    const envio = process.env.PASS_SENDGRID
+    return res.json(envio)
+}
+
 module.exports = {
-    login
+    login,
+    teste
 }

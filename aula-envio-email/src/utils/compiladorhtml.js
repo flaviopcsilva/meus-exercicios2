@@ -1,0 +1,3 @@
+const compiladorHtml = async (arquivo) => {
+
+}
